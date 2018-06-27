@@ -17,7 +17,7 @@ class DataGenerator {
             this.painting.create({
                 name: faker.fake("{{name.lastName}}, {{name.firstName}} {{name.suffix}}"),
                 url: faker.image.imageUrl(),
-                techniques: faker.random.words('5')
+                techniques: Array.from({length: 5}, () => faker.random.word())
             });
         }
     }
